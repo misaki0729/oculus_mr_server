@@ -3,19 +3,22 @@
 <head>
 <meta charset="utf-8">
 <title>Video Capture</title>
+
+<script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
+<script src="https://unpkg.com/aframe-html-shader@0.2.0/dist/aframe-html-shader.min.js"></script>
+<script src="http://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="operate.js" type="text/javascript"></script>
+
 </head>
 <body>
 <div>
-<div class="control"><button id="startAndStop" disabled>Start</button></div>
 </div>
 <p class="err" id="errorMessage"></p>
-<div>
-    <video hidden id="videoInput" width=1280 height=720></video>
-    <canvas id="canvasOutput" width=1280 height=720></canvas>
-</div>
-<script src="https://webrtc.github.io/adapter/adapter-5.0.4.js" type="text/javascript"></script>
-<script src="utils.js" type="text/javascript"></script>
-<script src="operate.js" type="text/javascript"></script>
+<a-scene>
+    <a-sky src="background.jpg" rotation="0 170 0"></a-sky>
+    <a-image id="canvas" scale="40 40 40" position="-3 10 -30"></a-image>
+</a-scene>
 
 </body>
 </html>
